@@ -11,7 +11,7 @@ The tax calculation logic is open for extension but closed for modification.
 If new tax rules are required you can add new TaxPolicy implementations without altering existing classes.
 
 Liskov Substitution Principle (LSP)
-Any new class implementing TaxStrategy can be substituted wherever TaxPolicy is used.
+Any new class implementing TaxPolicy can be substituted wherever TaxPolicy is used.
 
 Interface Segregation Principle (ISP)
 The TaxPolicy interface is  specific to tax calculation.
