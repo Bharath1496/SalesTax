@@ -1,0 +1,21 @@
+Single Responsibility Principle (SRP)
+Product: Represents a product with properties like name, price, and flags for exemption/import , behaviour to calculate final price
+Receipt: Handles managing products, calculating totals, and printing the receipt.
+Parser: Parses input strings to create Product objects.
+TaxPolicy Interface:  tax calculation.
+BasicTaxPolicy & ImportTaxPolicy: Implements specific tax rules independently.
+SalesTaxCalculator: Combines tax policies and applies them to Products.
+
+Open/Closed Principle (OCP)
+The tax calculation logic is open for extension but closed for modification.
+If new tax rules are required you can add new TaxPolicy implementations without altering existing classes.
+
+Liskov Substitution Principle (LSP)
+Any new class implementing TaxStrategy can be substituted wherever TaxPolicy is used.
+
+Interface Segregation Principle (ISP)
+The TaxPolicy interface is  specific to tax calculation.
+
+Dependency Inversion Principle (DIP)
+The Receipt class depends on the TaxPolicy interface, not on implementations.
+This allows flexibility in swapping or modifying tax policies without changing the Receipt logic.
